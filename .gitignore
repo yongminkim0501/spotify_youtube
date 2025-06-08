@@ -162,7 +162,6 @@ music/
 # Log files
 *.log
 logs/
-
 # Temporary files
 temp/
 tmp/
