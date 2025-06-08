@@ -13,9 +13,13 @@ class ConnectYoutube:
     def search_videos(self,query):
         request = self.youtube.search().list(
             part="snippet",
-            maxResults=10,
+            maxResults=1,
             q=query,
             type="video"
         )
         response = request.execute()
         return response
+
+    def get_search_name(self, query):
+        data = self.search_videos(query)
+        return data
